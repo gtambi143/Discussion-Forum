@@ -1,11 +1,12 @@
 import thread
 from ChatFns import *
+from ipAddress import hostname
 
 #---------------------------------------------------#
 #---------INITIALIZE CONNECTION VARIABLES-----------#
 #---------------------------------------------------#
 WindowTitle = 'Discussion Forum - Client'
-HOST = '192.168.43.163'#gethostname()
+HOST = hostname#'192.168.43.163'#gethostname()
 PORT = 8011
 s = socket(AF_INET, SOCK_STREAM)
 

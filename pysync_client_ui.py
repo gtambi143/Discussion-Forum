@@ -10,6 +10,8 @@ from PyQt4 import QtCore, QtGui
 import sys,os
 import socket
 import time
+import ipAddress
+from ipAddress import hostname
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -98,7 +100,7 @@ class Ui_fileSyncClient(QtGui.QMainWindow):
     def acceptConnection(self,name):
         print self.name
         s=socket.socket()
-        host='192.168.43.163'#socket.gethostname()
+        host=hostname#'192.168.43.163'#socket.gethostname()
         port=10000
         s.connect((host,port))
         #self.lineEdit_3.

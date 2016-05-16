@@ -10,6 +10,7 @@ from PyQt4 import QtCore, QtGui
 import sys,os
 import socket
 from _socket import gethostname
+from ipAddress import *
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -77,7 +78,7 @@ class Ui_Recieve(QtGui.QMainWindow):
     
     def fileRecieve(self):
         s=socket.socket()
-        host='192.168.43.163'#socket.gethostname()
+        host=hostname#'192.168.43.163'#socket.gethostname()
         port=10000
         s.connect((host,port))
         #self.lineEdit_3.
